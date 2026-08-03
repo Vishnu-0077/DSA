@@ -1,0 +1,35 @@
+arr = [7, 7, 7, 7, 13, 11, 12, 7]
+k = 3
+m = 2
+
+if k * m > len(arr):
+    print(-1)
+else:
+    def can_make(days):
+        flower = 0
+        boquet = 0
+        for p in arr:
+            # FIX 1: Change to <= so flowers blooming on 'days' are counted
+            if p <= days: 
+                flower += 1
+                if flower == k:
+                    boquet += 1
+                    flower = 0
+            else:
+                flower = 0
+        return boquet
+
+    low = min(arr)
+    high = max(arr)
+    ans = -1
+
+    while low <= high:
+        mid = (high + low) // 2
+        if can_make(mid) < m:
+            low = mid + 1
+        elif can_make(mid) >= m:
+            ans = mid
+            high = mid - 1
+            
+    # FIX 2: Print ans, not mid
+    print(ans)

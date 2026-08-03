@@ -1,0 +1,6 @@
+binarry search means like search an element but not by for loop by using
+
+mid=(low+high)/2 
+
+then low=mid+1
+and  high=mid-1

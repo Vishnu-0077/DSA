@@ -1,0 +1,1 @@
+#min_insertions to be added to make it palindromic = len(s) - maximum len of palindromic sequence

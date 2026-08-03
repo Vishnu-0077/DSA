@@ -1,0 +1,25 @@
+1. found a trick for recursive, use recursive inside a func if the arguments does not match
+
+def func(n):
+    
+    recurse(n,x)
+    ...
+    ....
+        return recurse(n-1,x)
+
+this way you can do recursive even though arguments did not match
+
+2. if anything is about counting the number of, then it can be done via some logic to find the number also
+
+3.def generate_binary(n, prefix=""): #here we can use an extra argument, which we dont have to give in input, but can use in recursive func
+  but the print will be just generate_binary(n)
+
+4. see how all the generate using recusion  works
+
+5. def paranthesis(n, m=None, paran=''):
+    if m is None: #see when adding a new parameter, keeping this is m is None and assigning value is useful
+        m=n 
+    now we can easily put 
+    ....
+    ....
+    paranthesis(n-1,m-1).....whatever

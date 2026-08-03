@@ -1,0 +1,7 @@
+how dfs works in matrix is....
+if checks for the each row and if any row contains one, the we run a dfs recursion on it. is (1,4) is found
+and 1 was our previous node, and 4 was neighbour, so we start to find with what the 4 is connected
+for we make the current node as 4 and search for neighbours...in all neihbours found we will branch out
+and find their neighbours till we couldnt find any of the neighbours
+pretty effective method and works very well
+

@@ -1,0 +1,85 @@
+class Node:
+    def __init__(self, data1, next1=None):
+        self.data = data1
+        self.next = next1
+# Creating a Node 'x' with the first element of the array
+x = Node(2)
+# Creating a reference 'y' pointing to the same Node 'x'
+y = x
+# Printing the reference 'y', which represents the memory address of the Node 'x'
+print(y)
+
+
+Let's break down the key concepts in your selection:
+
+1. class Node: - The Building Block
+
+Imagine you want to store a list of items, like your grocery list: "Milk," "Eggs," "Bread." A "Node" is like a single box that holds one of these items.
+
+    class Node: is just a blueprint for creating these boxes. It tells us what each box will contain.
+
+2. def __init__(self, data1, next1=None): - What's Inside the Box
+
+This is like the "instruction manual" for what goes into our Node box when we first create it.
+
+    self: This refers to the specific Node box we are currently making.
+
+    data1: This is where you put the actual item you want to store in the box. Think of it as the "content" of your grocery item.
+
+        Example: If you're storing "Milk," data1 would be "Milk."
+
+    next1=None: This is super important for linking! It's like a little arrow or a pointer inside your box. It tells you where the next box in your list is located.
+
+        Initially, we set next1=None. This means that when you first create a box, it doesn't point to anything else yet. It's like a standalone box.
+
+3. self.data = data1 and self.next = next1 - Storing the Information
+
+These lines simply take the data1 and next1 you provided when creating the Node and store them inside that specific Node object.
+
+    self.data: This is where your actual item (like "Milk") is stored within the Node box.
+
+    self.next: This is where the "arrow" to the next box is stored within the Node box.
+
+4. x = Node(2) - Creating Your First Box
+
+This is where you actually make a Node box!
+
+    Node(2): You're calling your Node blueprint and telling it to create a new box.
+
+        You're putting the number 2 into this box as its data.
+
+        Since you didn't specify a next1, it will automatically be None (meaning this box doesn't point to anything yet).
+
+    x =: You're giving this newly created box a name, x. So now, x refers to this specific box that contains the number 2.
+
+5. y = x - Giving Another Name to the Same Box
+
+This is a crucial concept!
+
+    Imagine you have a single physical box named x that contains "Milk."
+
+    When you say y = x, you're not creating a new box. You're just putting another label, y, on the same exact box that x is already pointing to.
+
+    So, both x and y now refer to the very same memory location where your Node containing 2 is stored. They are essentially two different names for the same thing.
+
+6. print(y) - Showing Where the Box Is
+
+    When you print(y), you're essentially asking Python: "Where is the box that y is pointing to?"
+
+    The output you'll get will look something like <__main__.Node object at 0x...>, which is the memory address of the Node object. It's Python telling you the unique location of that specific box in your computer's memory.
+
+In Simple Terms (Analogy):
+
+Imagine you're organizing your favorite action figures.
+
+    class Node: This is the design for a display stand. Each stand can hold one action figure and has a slot where you can attach it to the next display stand.
+
+    def __init__(self, data1, next1=None):: When you get a new display stand, you put an action figure (data1) on it. Initially, it's not connected to any other stand (next1=None).
+
+    x = Node(2): You take a new display stand, put "Spiderman" (represented by 2) on it, and call this stand "Stand X."
+
+    y = x: Your friend sees "Stand X" with Spiderman and says, "That's my favorite! I'll call it 'Stand Y' too!" So now, both you and your friend are pointing to the same physical stand.
+
+    print(y): If you ask, "Where is Stand Y?", you'll get the location of that specific physical display stand in your room.
+
+This is the foundation for creating a "Linked List," where you chain these Node boxes together using their next pointers to form a sequence of data.
