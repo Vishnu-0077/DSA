@@ -3,7 +3,7 @@ class Node:
         self.data = data
         self.left = None
         self.right = None
-def left_view(root):
+def left_view(root): #actually level order traversal only
     stack = []
     stack.append(root)
     hor = []
