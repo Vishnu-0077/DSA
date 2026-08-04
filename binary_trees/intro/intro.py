@@ -74,7 +74,7 @@ class BinaryTree:
                 node = node.left
             node = stack.pop()
             print(node.data,end="")
-            node = node.right #if we are almost at left end, then right is None, so we pop the stack and print the node, then we go to the right
+            node = node.right #if we are almost at left end, then right is None, so we pop the stack and print the node, then we go to the right// actually node.right.. help us to not comback there again, if node.right not written, we will comback there again
         return stack
     
     def postorder_iterative_traversel(self,start):
@@ -109,7 +109,6 @@ print(bt.levelorder(bt.root))
 print(bt.preorder_traversel_iterative(bt.root))
 print(bt.level_order_traversel_iterative(bt.root))
 print(bt.inorder_iterative_traversel(bt.root))
-print(bt.postorder_iterative_traversel(bt.root))
 # The above code implements a binary tree with various traversal methods including preorder, inorder, postorder, and level order traversals.
 # It also includes iterative versions of preorder, inorder, and postorder traversals. 
 # The binary tree is constructed with nodes labeled A to G for demonstration purposes.
