@@ -25,6 +25,12 @@ def max_any_path_sum(root,stack = None):
     
     return max(max_any_path_sum(root.left,stack) , max_any_path_sum(root.right,stack))
 
+def max_path_sum_2(root):
+    if root is None:
+        return 0
+    max_p = root.value+max_sum_in_height(root.left)+max_sum_in_height(root.right)
+    return max(max_path_sum_2(root.left),max_path_sum_2(root.right),max_p)
+
 
 root = Node(1)
 root.left = Node(2)
@@ -33,5 +39,5 @@ root.left.left = Node(4)
 root.left.right = Node(5)
 root.right.left = Node(6)
 root.right.right = Node(7)
-print(max_sum_in_height(root))
 print(max_any_path_sum(root))
+print(max_path_sum_2(root))

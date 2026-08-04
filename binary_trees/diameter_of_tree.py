@@ -42,6 +42,12 @@ def diameter_of_tree(root,max_height = 0):
     
     return max(diameter_of_tree(node_left,max_height),diameter_of_tree(node_right,max_height))
 
+def diammeter_2(root):
+    if not root:
+        return 0
+    dia = height_of_tree(root.left)+height_of_tree(root.right)+1
+    return max(dia,diammeter_2(root.left),diammeter_2(root.right))
+
 #draw and visualize to understand, adhan ore vali
 
 root = Node(1)
@@ -53,6 +59,7 @@ root.right.left = Node(6)
 root.left.right.left = Node(7)
 root.left.right.right = Node(8)
 print(diameter_of_tree(root))
+print(diammeter_2(root))
 
 
 
