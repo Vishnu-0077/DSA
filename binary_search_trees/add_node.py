@@ -21,6 +21,7 @@ def add_node(root, add):
                 break
     return root.data
 
+
 root = Node(8)
 root.left = Node(3)
 root.right = Node(10)

@@ -16,6 +16,13 @@ def ceiling(root, given):
             root = root.left
     return ans
 
+def ceiling_2(root,given):
+    while root is None:
+        return float('inf')
+    if root.data<given:
+        return ceiling_2(root.right,given)
+    return min(root.data,ceiling_2(root.left,given))
+
 # Construct the tree from the image
 root = Node(10)
 
@@ -33,3 +40,4 @@ root.right.left = Node(11)
 root.right.right = Node(14)
 
 print(ceiling(root,8))
+print(ceiling_2(root,8))

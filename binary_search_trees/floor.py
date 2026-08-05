@@ -16,6 +16,14 @@ def floor(root, given):
             root = root.left
     return ans
 
+def floor_2(root, given):
+    if root is None:
+        return 0
+    if root.data>given:
+        return floor_2(root.left,given)
+    return max(root.data,floor_2(root.right,given))
+        
+
 # Construct the tree from the image
 root = Node(10)
 
@@ -33,3 +41,4 @@ root.right.left = Node(11)
 root.right.right = Node(14)
 
 print(floor(root,8))
+print(floor_2(root,8))
