@@ -8,7 +8,6 @@ def dfs(matrix,x,y,visited,count): #here in this dfs we are counting everymin as
                 result = dfs(matrix,x+i,y+j,visited,count+1)
                 maxi = max(maxi,result)
     return maxi
-            
 
 
 def main(matrix): #in no of connected we counted no of paths, so we counted outside the dfs

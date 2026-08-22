@@ -1,3 +1,7 @@
+#intuition.... start will all the possibl epositions and then dfs it.... store the visited
+#constrain the boundaries... u don have to go to the edge of the matrix... as that is the question
+#store the visited and then change it...
+
 def dfs(matrix,visited,x,y):
     visited.add((x,y))
     directions = [[1,0],[-1,0],[0,1],[0,-1]]
