@@ -5,18 +5,18 @@ def dfs(matrix,node,visited,stack):
             dfs(matrix,neighbour,visited,stack)
     stack.append(node)
     
-def main(matrix,n):
+def main(matrix):
     visited = set()
     stack = []
+    n=len(matrix)
     for node in range(n):
         if node not in visited:
             dfs(matrix,node,visited,stack)
     return stack[::-1]
 
 if __name__ == '__main__':
-    n = 3
-    adj = [[1],[],[2]]
-    print(main(adj,n))
+    adj = [[2], [], [1], [],[]] 
+    print(main(adj))
 
 #-----bfs------
 

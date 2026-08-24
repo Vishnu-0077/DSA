@@ -19,6 +19,7 @@ def dfs(matrix,node,visited,count):
             dist = neighbour[1]
             result = dfs(matrix,neighbour[0],visited,count+dist)
             mini = min(mini,result)
+    visited.remove(node)
     return mini
 
 def main(matrix,n):
