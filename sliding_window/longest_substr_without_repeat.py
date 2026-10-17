@@ -9,13 +9,12 @@ def slid(s):
             c+=1
             last_visited.add(s[r])
             r+=1
-
         else:
-            last_visited.remove(s[l])
             c-=1
+            last.visited.remove(s[r])
             l+=1
         max_c = max(c,max_c)
     return max_c
+    
 
-s = 'abc'
-print(slid(s))
+
