@@ -32,6 +32,23 @@ def hamara(arr):
                     max_len = le
     return max_len
             
+def pointers(arr):
+    l = 0
+    r = 0
+    cur = 0
+    l = 0
+    hash = {0:-1}
+    max_len = 0
+    for i in range(len(arr)):
+        cur = cur+arr[i]
+        if cur == 0:
+            max_len = cur+1
+        if cur not in hash:
+            hash[cur] = i
+        else:
+            max_len = max(max_len,i-hash[cur])
+    return max_len
 
 print(longest_subarray_with_sum_zero([1, -1, 2, -2, 3, -3]))  # Output: 6
 print(hamara([1, -1, 2, -2, 3, -3]))
+print(pointers([1, -1, 2, -2, 3, -3]))
