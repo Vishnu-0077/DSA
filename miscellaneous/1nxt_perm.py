@@ -29,4 +29,4 @@ class Solution:
                     nums[k],nums[k+1] = nums[k+1],nums[k]
                 k-=1
             j+=1
-        return nums
+        return nums 
